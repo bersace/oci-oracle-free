@@ -104,6 +104,7 @@ LABEL org.opencontainers.image.source https://github.com/gvenzl/oci-oracle-free
 
 USER oracle
 WORKDIR ${ORACLE_BASE}
+VOLUME /opt/oracle/oradata
 
 HEALTHCHECK CMD "${ORACLE_BASE}"/healthcheck.sh >/dev/null || exit 1
 
